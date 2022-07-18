@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Animation</title>
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to bottom left,rgb(46, 71, 215),rgb(0, 225, 255),white);
+            /* background-image: linear-gradient(to top right,pink,lightblue,lightgreen);  */
+        }
+
+        .ball{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(236, 236, 25, 0.963);
+            border-top: 10px solid black;
+            border-radius: 50%;
+            overflow: hidden;
+            animation: ball 1s linear infinite;
+        }
+        @keyframes ball {
+            0%{
+                transform: translateY(0) rotate(0deg) ;
+            }
+            50%
+            {
+                transform: translateY(-200px) rotate(180deg) ;
+            }
+            100%
+            {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+        .ball2{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(20, 107, 20);
+        }
+        .shadow{
+            height: 20px;
+            width: 50px;
+            background-color: gray;
+            border-radius: 50%;
+            animation: shadow 1s linear infinite;
+        }
+        @keyframes shadow {
+            0%{
+                
+                opacity: 100%;
+                transform: scale(1);
+            }
+            50%{
+               
+                opacity: 60%;
+                transform: scale(2);
+            }
+            100%{
+                opacity: 100%;
+                transform: scale(1);
+               
+            }
+        }
+        span{
+            animation: span .5s linear infinite;
+        }
+        @keyframes span {
+            0%{
+                opacity: 100%;
+            }
+            50%{
+                opacity: 30%;
+            }
+            100%
+            {
+                opacity: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="ball">
+            <div class="ball2"></div>
+        </div>
+        <div class="shadow"></div>
+        <h1>
+            LOADING
+            <span>. . .</span>
+        </h1>
+    </div>
+  
+    
+</body>
+</html>
